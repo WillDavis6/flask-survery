@@ -1,0 +1,11 @@
+{% extends 'base.htlm' %}
+{% block content %}
+<h1>{{ question.question }}</h1>
+<form actions="/answer" method="POST">
+    {% for choie in question.choice %}
+    <p><input type="radio" name="answer" value="{{ choice }}"> {{ choice }}</p>
+    {% endfor %}
+</select>
+<button>Continue</button>
+</form>
+{% endblock %}
